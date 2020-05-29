@@ -7,22 +7,34 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Node n1 = new Node(1);
-            Node n2 = new Node(2);
-            Node n3 = new Node(3);
-            Node n4 = new Node(4);
-            Node n5 = new Node(5);
-            Node n6 = new Node(6);
-            Node n7 = new Node(7);
+            Person Abuelo = new Person("Juan", 80);
+            Person Hijo1 = new Person("Carlos",50);
+            Person Hijo2 = new Person("Ana", 50);
+            Person Hijo3 = new Person("Facundo", 50);
+            Person Nieto11 = new Person("Vero", 20);
+            Person Nieto21 = new Person("Silvana", 20);
+            Person Nieto31 = new Person("Javier",20);
+            Person Nieto32 = new Person("Camila",20);
 
-            n1.AddChildren(n2);
-            n1.AddChildren(n3);
+            Node nAbuelo = new Node(Abuelo);
+            Node nHijo1 = new Node(Hijo1);
+            Node nHijo2 = new Node(Hijo2);
+            Node nHijo3 = new Node(Hijo3);
+            Node nNieto11 = new Node(Nieto11);
+            Node nNieto21 = new Node(Nieto21);
+            Node nNieto31 = new Node(Nieto31);
+            Node nNieto32 = new Node(Nieto32);
 
-            n2.AddChildren(n4);
-            n2.AddChildren(n5);
+            nAbuelo.AddChildren(nHijo1);
+            nAbuelo.AddChildren(nHijo2);
+            nAbuelo.AddChildren(nHijo3);
 
-            n3.AddChildren(n6);
-            n3.AddChildren(n7);
+            nHijo1.AddChildren(nNieto11);
+            
+            nHijo2.AddChildren(nNieto21);
+
+            nHijo3.AddChildren(nNieto31);
+            nHijo3.AddChildren(nNieto32);
 
             // visitar el árbol aquí
         }
